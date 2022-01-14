@@ -1,0 +1,40 @@
+.contenedor {
+    max-width: 1100px;
+    width: 80%;
+    margin: 0 auto; 
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header .header__logo {
+    padding: .5rem 0; 
+}
+.header__logo img {
+    height: 15vh;
+}
+.navegacion {
+    width: 60%;
+}
+.navegacion__menu {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    list-style: none; 
+    text-align: center;
+    padding: 0;
+}
+.navegacion__menu li {
+    font-family: "Lato";
+    font-size: 1rem;
+    font-weight: 300;
+    color: #121212;
+    text-transform: uppercase;
+    text-decoration: none; 
+}
+.navegacion__menu li:hover {
+    color: #ffc331;
+}
