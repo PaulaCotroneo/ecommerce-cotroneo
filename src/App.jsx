@@ -1,8 +1,8 @@
-import './App.css';
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { NavBar } from './components/NavBar/NavBar';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import './App.css';
 
-function App() {
+export default function App() {
 
   return (
     <div className="App">
@@ -12,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+

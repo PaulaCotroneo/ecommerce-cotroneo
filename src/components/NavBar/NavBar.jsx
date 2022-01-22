@@ -1,7 +1,7 @@
 import React from 'react'
-import logoFermin from './logo.png'
-import './NavBar.css'
 import { CartWidget } from '../CartWidget/CartWidget'
+import './NavBar.css'
+import logoFermin from './logo.png'
 
 export const NavBar = () => {
     return (
