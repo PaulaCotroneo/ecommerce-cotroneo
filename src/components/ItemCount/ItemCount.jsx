@@ -20,7 +20,7 @@ function ItemCount({initial, stock, onAdd}) {
   }
 
   return (
-      <div className="container w-50">
+      <div>
         <button className="producto__btn" onClick={handleAumentar}>+</button>
         { contador }
         <button className="producto__btn" onClick={handlerRestar}>-</button><br/>

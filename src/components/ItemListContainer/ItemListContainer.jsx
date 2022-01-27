@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from "react"
 import { ItemList } from "../ItemList/ItemList"
 import { getProducts } from "../../helpers/getProducts"
-import './ItemList.css'
+import '../../App.css'
 
 
 export function ItemListContainer () { 
     
     const [listProducts, setListProducts] = useState ([])
     const [loading, setloading] = useState(true)
+    const categoriaId = 'Perro';
            
     useEffect(() => {
         getProducts 
-        .then(res => setListProducts(res))
+        .then((data) => 
+        setListProducts (
+            categoriaId ? data.filter((el) => el.categoria === categoriaId) : data)
+        )
         .catch(err => console.log(err))
         .finally(()=> setloading(false))    
     }, [])
@@ -19,12 +23,11 @@ export function ItemListContainer () {
     return (
         <div>
             <h1 className="encabezado centrado">Bienvenidos a Fermín Pet Shop!</h1>
-            { loading ? <h2>Cargando ...</h2> : <ItemList listProducts= { listProducts } /> }
-                                             
+            { loading ? <h2 className="encabezado centrado">Cargando ...</h2> : <ItemList listProducts= { listProducts } /> }                                   
         </div>
     )
 }
 
-//export default ItemListContainer;
+
 
 

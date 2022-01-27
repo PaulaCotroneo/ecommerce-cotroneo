@@ -1,11 +1,8 @@
 import React from 'react';
-import ItemCount from '../ItemCount/ItemCount'
 
-export const Item = ( {id, nombre, imagen, descripImagen, categoria, precio, oferta, stock }) => {
 
-    function onAdd(cant){
-        console.log(cant)
-    }  
+export const Item = ( {id, nombre, imagen, descripImagen, categoria, precio, oferta }) => {
+
     
   return (
     <div className="productos contenedor">
@@ -18,11 +15,10 @@ export const Item = ( {id, nombre, imagen, descripImagen, categoria, precio, ofe
                     <p className="precio">${precio}</p>  
                     <p className="oferta">${oferta}</p> 
                 </div>  
+                <button className="producto__btnDetalleProducto">Detalle del Producto</button>
             </div>
-            <ItemCount initial={1} stock={stock} onAdd={onAdd}/>
         </div>
     </div>
   
-
     )
 };
