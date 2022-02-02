@@ -10,6 +10,9 @@ body {
   font-family: "Lato"; 
   background-color: #f9f4f1;
 }
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
 p {
   font-family: "Lato"; 
   font-weight: 300;

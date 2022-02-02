@@ -6,9 +6,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 890,
 		oferta: 950,
-        categoria: 'Perro',
-        id: 1,
-		stock: 20,
+        categoria: 'perros',
+        id: '1',
+		stock: 20
 	},
 
     {
@@ -18,9 +18,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 3150,
 		oferta: 3400,
-        categoria: 'Gato',
-        id: 2,
-		stock: 6,
+        categoria: 'gatos',
+        id: '2',
+		stock: 6
 	},
 
     {
@@ -30,9 +30,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 129,
 		oferta: 150,
-        categoria: 'Gato',
-        id: 3,
-		stock: 15,
+        categoria: 'gatos',
+        id: '3',
+		stock: 15
 	},
 
     {
@@ -42,9 +42,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 265,
 		oferta: 300,
-        categoria: 'Perro',
-        id: 4,
-		stock: 25,
+        categoria: 'perros',
+        id: '4',
+		stock: 25
 	},
 
     {
@@ -54,9 +54,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 9549,
 		oferta: 9800,
-        categoria: 'Gato',
-        id: 5,
-		stock: 3,
+        categoria: 'gatos',
+        id: '5',
+		stock: 3
 	},
 
     {
@@ -66,9 +66,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 155,
 		oferta: 200,
-        categoria: 'Gato',
-        id: 6,
-		stock: 30,
+        categoria: 'gato',
+        id: '6',
+		stock: 30
 	},
 
     {
@@ -78,9 +78,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 729,
 		oferta: 800,
-        categoria: 'Gato',
-        id: 7,
-		stock: 15,
+        categoria: 'gatos',
+        id: '7',
+		stock: 15
 	},
 
     {
@@ -90,9 +90,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 369,
 		oferta: 399,
-        categoria: 'Gato',
-        id: 8,
-		stock: 12,
+        categoria: 'gatos',
+        id: '8',
+		stock: 12
 	},
 
 	{
@@ -102,9 +102,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 455,
 		oferta: 520,
-        categoria: 'Perro',
-        id: 9,
-		stock: 8,
+        categoria: 'perros',
+        id: '9',
+		stock: 8
 	},
 
 	{
@@ -114,9 +114,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 195,
 		oferta: 220,
-        categoria: 'Perro',
-        id: 10,
-		stock: 20,
+        categoria: 'perros',
+        id: '10',
+		stock: 20
 	},
 
 	{
@@ -126,8 +126,8 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 1200,
 		oferta: 1500,
-        categoria: 'Perro',
-        id: 11,
+        categoria: 'perros',
+        id: '11',
 		stock: 10,
 	},
 
@@ -138,9 +138,9 @@ const products = [
 		descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 		precio: 135,
 		oferta: 200,
-        categoria: 'Gato',
-        id: 12,
-		stock: 30,
+        categoria: 'gatos',
+        id: '12',
+		stock: 30
 	},
 ];
 

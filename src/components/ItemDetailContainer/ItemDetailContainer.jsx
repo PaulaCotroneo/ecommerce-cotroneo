@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import { getProducts } from "../../helpers/getProducts"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import '../../App.css'
 
 
-
-export function ItemDetailContainer () { 
+export const ItemDetailContainer = () => {
     
-    const [product, setProduct] = useState ([])
-    const productId = 5 ;
+    const [product, setProduct] = useState ({});
+    const { idItem } = useParams();
            
     useEffect(() => {
-        getProducts 
-        .then((data) => { 
-            setProduct (
-                data.find((item) => item.id === productId)
-                )
-        })
+
+        getProducts
+        .then(res => setProduct (res.find((prod) => prod.id === idItem)))
         .catch(err => console.log(err))  
-    }, [])
-    
+
+    }, []);
+
+    console.log(product.id)
+
     return (
-        <div>
+        <>
             <ItemDetail product = { product } />                                    
-        </div>
+        </>
     )
 }
