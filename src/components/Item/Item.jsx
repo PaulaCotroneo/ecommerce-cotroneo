@@ -6,7 +6,6 @@ export const Item = ( {id, nombre, imagen, descripImagen, categoria, precio, ofe
 
     
   return (
-    <div className="productos contenedor">
         <div key={id} className="producto">
             <img className="producto__imagen" src={imagen} alt={descripImagen}/> 
             <div className="producto__informacion"> 
@@ -17,11 +16,9 @@ export const Item = ( {id, nombre, imagen, descripImagen, categoria, precio, ofe
                     <p className="oferta">${oferta}</p> 
                 </div>  
                 <Link to={ `/detalle/${id}` }>
-                    <button className="producto__btnDetalleProducto">Detalle del Producto</button>
+                    <button className="producto__btn">Detalle del Producto</button>
                 </Link>
             </div>
-        </div>
-    </div>
-  
+        </div>  
     )
 };

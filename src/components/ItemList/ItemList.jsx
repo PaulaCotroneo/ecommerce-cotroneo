@@ -3,10 +3,11 @@ import { Item } from '../Item/Item';
 
 export const ItemList = ( {listProducts} ) => {
   return (
-    <>
+    <div className="productos contenedor">
       { listProducts.map( (prod) => (
       <Item 
       key={prod.id} 
+      id={prod.id}
       nombre={prod.nombre} 
       imagen={prod.imagen} 
       descripImagen={prod.descripImagen} 
@@ -16,6 +17,6 @@ export const ItemList = ( {listProducts} ) => {
       stock={prod.stock}
       /> 
       ) ) }
-    </>
+    </div>
   )
 };

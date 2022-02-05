@@ -73,9 +73,10 @@ img {
 }
 /** Productos **/
 .productos {
-  display: flex; 
-  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: flex-end; 
   margin-top: 2rem;
   margin-bottom: 5rem;
 }
@@ -100,7 +101,7 @@ img {
 .producto__informacion p {
   font-size: .9rem; 
 }
-.producto__btnDetalleProducto {
+.producto__btn {
   width: 100%;
   height: 2.5rem;
   background-color: #ffc331;
@@ -111,36 +112,6 @@ img {
   text-decoration: none; 
   margin-bottom: 1rem;
   border-radius: 2.5rem;
-  border: none;
-}
-.producto__btnDetalleProducto:hover {
-  background-color: #121212;
-}
-.producto__btnAgregarCarrito {
-  width: 50%;
-  background-color: #ffc331;
-  padding: .5rem 1rem;
-  display: inline;
-  text-align: center;
-  color: #FFFFFF;
-  text-decoration: none; 
-  margin-bottom: 1rem;
-  border-radius: 1rem;
-  border: none;
-}
-.producto__btnAgregarCarrito:hover {
-  background-color: #121212;
-}
-.producto__btn{
-  width: 3rem;
-  background-color: #ffc331;
-  padding: 1rem 1rem;
-  display: inline;
-  text-align: center;
-  color: #FFFFFF;
-  text-decoration: none; 
-  margin: 1rem;
-  border-radius: .5rem;
   border: none;
 }
 .producto__btn:hover {
@@ -176,6 +147,7 @@ img {
 }
 .detalle {
   display: flex;
+  height: 35rem;
   flex: 0 1 calc(33% - 1rem); 
   flex-direction: colimn;
   background-color: #ffffff;
@@ -199,22 +171,7 @@ img {
   font-size: 1.2rem; 
   padding-bottom: 2rem;
 }
-.producto__btnAgregarCarrito {
-  width: 50%;
-  background-color: #ffc331;
-  padding: .5rem 1rem;
-  display: inline;
-  text-align: center;
-  color: #FFFFFF;
-  text-decoration: none; 
-  margin-bottom: 1rem;
-  border-radius: 1rem;
-  border: none;
-}
-.producto__btnAgregarCarrito:hover {
-  background-color: #121212;
-}
-.producto__btn{
+.cantidad__btn{
   width: 3rem;
   background-color: #ffc331;
   padding: 1rem 1rem;
@@ -226,7 +183,7 @@ img {
   border-radius: .5rem;
   border: none;
 }
-.producto__btn:hover {
+.cantidad__btn:hover {
   background-color: #121212;
 }
 

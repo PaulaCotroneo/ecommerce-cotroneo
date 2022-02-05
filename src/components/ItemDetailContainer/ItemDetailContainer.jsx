@@ -7,7 +7,8 @@ import '../../App.css'
 
 export const ItemDetailContainer = () => {
     
-    const [product, setProduct] = useState ({});
+    const [product, setProduct] = useState ();
+    const [load, setLoad] = useState(true);
     const { idItem } = useParams();
            
     useEffect(() => {
@@ -15,14 +16,15 @@ export const ItemDetailContainer = () => {
         getProducts
         .then(res => setProduct (res.find((prod) => prod.id === idItem)))
         .catch(err => console.log(err))  
+        .finally(()=> setLoad(false)) 
 
     }, []);
 
-    console.log(product.id)
+    console.log()
 
     return (
         <>
-            <ItemDetail product = { product } />                                    
+            { load ? <h2 className="centrado contenedor">Cargando ...</h2> : <ItemDetail product = { product } /> }                                    
         </>
     )
-}
+};

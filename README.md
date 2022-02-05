@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Proyecto Fermín Pet Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto del curso de React de Coder House creado para Fermín Pet Shop.
+
+✒️ Autor
+
+Cotroneo Paula
 
 ## Available Scripts
 

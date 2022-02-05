@@ -8,8 +8,8 @@ import '../../App.css'
 
 export const ItemListContainer = () => {
     
-    const [listProducts, setListProducts] = useState ([])
-    const [loading, setloading] = useState(true)
+    const [listProducts, setListProducts] = useState ([]);
+    const [loading, setLoading] = useState(true);
     const { idCategoria } = useParams();
            
     useEffect(() => {
@@ -18,12 +18,12 @@ export const ItemListContainer = () => {
             getProducts 
             .then(res => setListProducts (res.filter((el) => el.categoria === idCategoria)))
             .catch(err => console.log(err))
-            .finally(()=> setloading(false))   
+            .finally(()=> setLoading(false))   
         } else {
             getProducts 
             .then(res => setListProducts(res))
             .catch(err => console.log(err))
-            .finally(()=> setloading(false)) 
+            .finally(()=> setLoading(false)) 
         }
 
     }, [ idCategoria ])
@@ -31,8 +31,8 @@ export const ItemListContainer = () => {
     
     return (
         <div>
-            <h1 className="encabezado centrado">Bienvenidos a Fermín Pet Shop!</h1>
-            { loading ? <h2 className="encabezado centrado">Cargando ...</h2> : <ItemList listProducts= { listProducts } /> }                                   
+            <h1 className="centrado contenedor">Bienvenidos a Fermín Pet Shop!</h1>
+            { loading ? <h2 className="centrado contenedor">Cargando ...</h2> : <ItemList listProducts= { listProducts } /> }                                   
         </div>
     )
 }
