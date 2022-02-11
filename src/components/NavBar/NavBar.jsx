@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { CartWidget } from '../CartWidget/CartWidget'
+import { useCartContext } from '../../context/CartContext';
 import '../../App.css'
 import logoFermin from './logo.png'
 
 
 export const NavBar = () => {
+
+    const { cantidadCarrito } = useCartContext()
+
     return (
         <header className="header contenedor">
             <Link to='/'>
@@ -20,6 +24,7 @@ export const NavBar = () => {
                 </ul>
             </nav>
             <Link to='/cart'>
+                <div className="cart__cantidad">{ cantidadCarrito() !== 0 && cantidadCarrito()}</div>
                 <CartWidget/>
             </Link>
         </header>

@@ -12,17 +12,24 @@ export function CartContextProvider({ children }) {
     function agregarAlCarrito(item){
 
         const evitarDuplicados = [...cartList]
-        if (evitarDuplicados.some(i => i.id === item.id)) {
-            evitarDuplicados.find(i => i.id === item.id).cantidad +=  item.cantidad
+        if (evitarDuplicados.some(i => i.item.id === item.item.id)) {
+            evitarDuplicados.find(i => i.item.id === item.item.id).cantidad +=  item.cantidad
             setCartList(evitarDuplicados)
         } else {
             setCartList( [...cartList, item ] )
         }
     }
 
-    function eliminarDelCarrito( item ){
-        const eliminarItem = cartList.filter(i => i.id !== item.id);
-        setCartList([...eliminarItem]);
+    function cantidadCarrito() {
+        return cartList.reduce((acum, item) =>  acum += item.cantidad  ,0)
+    }
+
+    function precioTotal(){
+        return cartList.reduce((acum, item) =>  acum= acum + (item.item.precio * item.cantidad),0)
+    }
+
+    function eliminarDelCarrito( id ){
+        setCartList( cartList.filter( i => i.item.id !== id ) )
     } 
 
     function vaciarCarrito(){
@@ -32,6 +39,8 @@ export function CartContextProvider({ children }) {
     return <cartContext.Provider value={{
         cartList,
         agregarAlCarrito,
+        cantidadCarrito,
+        precioTotal,
         eliminarDelCarrito,
         vaciarCarrito
     }}>

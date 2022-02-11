@@ -11,7 +11,7 @@ export const ItemDetail = ( { product } ) => {
     const [contador, setContador] = useState (0);
 
     function onAdd(cant){
-        agregarAlCarrito({...product, cantidad: cant})
+        agregarAlCarrito({item: product, cantidad: cant})
         setContador(cant)
     }  
     
