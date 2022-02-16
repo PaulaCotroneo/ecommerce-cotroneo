@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { CartWidget } from '../CartWidget/CartWidget'
 import { useCartContext } from '../../context/CartContext';
@@ -19,7 +18,7 @@ export const NavBar = () => {
             </Link>
             <nav className="navegacion">
                 <ul className="navegacion__menu">
-                    <Link to='/categoria/perros'><li>Productos Fermin Perros</li></Link>
+                    <Link NavLi to='/categoria/perros'><li>Productos Fermin Perros</li></Link>
                     <Link to='/categoria/gatos'><li>Productos Fermin Gatos</li></Link>
                 </ul>
             </nav>

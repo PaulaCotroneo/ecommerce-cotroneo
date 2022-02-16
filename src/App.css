@@ -71,6 +71,7 @@ img {
 .navegacion__menu li:hover {
   color: #ffc331;
 }
+
 /** Productos **/
 .productos {
   display: flex;
