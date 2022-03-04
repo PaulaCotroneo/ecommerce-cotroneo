@@ -1,31 +1,33 @@
 import { useState } from "react";
 
 function ItemCount({initial, stock, onAdd}) {
-  const [contador, setcontador] = useState(initial);
+  const [count, setCount] = useState(initial);
 
-  const handleAumentar=()=>{
-    if (contador < stock) {
-      setcontador(contador + 1)
+  const handleIncrease = () => {
+    if (count < stock) {
+      setCount(count + 1)
     }
   }
   
-  const handlerRestar=()=>{    
-    if (contador > initial) {
-      setcontador(contador - 1)
+  const handlerSubtract = () => {    
+    if (count > initial) {
+      setCount(count - 1)
     }
   }
 
-  const agregar=()=>{
-    onAdd(contador)
+  const add = () => {
+    onAdd(count)
   }
 
   return (
+
       <div>
-        <button className="cantidad__btn" onClick={handleAumentar}>+</button>
-        { contador }
-        <button className="cantidad__btn" onClick={handlerRestar}>-</button><br/>
-        <button className="producto__btn" onClick={agregar} >Agregar al carrito</button>
+        <button className="quantity__button" onClick={ handleIncrease }>+</button>
+        { count }
+        <button className="quantity__button" onClick= { handlerSubtract }>-</button><br/>
+        <button className="product__button" onClick= { add } >Agregar al carrito</button>
       </div>
+      
   )
 }
 

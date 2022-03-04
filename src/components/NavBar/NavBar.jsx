@@ -7,23 +7,24 @@ import logoFermin from './logo.png'
 
 export const NavBar = () => {
 
-    const { cantidadCarrito } = useCartContext()
+    const { cartQuantity } = useCartContext()
 
     return (
-        <header className="header contenedor">
+        
+        <header className="header container">
             <Link to='/'>
                 <div className="header__logo">
                     <img src={logoFermin} alt="logo-fermin"/>
                 </div>
             </Link>
-            <nav className="navegacion">
-                <ul className="navegacion__menu">
-                    <Link NavLi to='/categoria/perros'><li>Productos Fermin Perros</li></Link>
-                    <Link to='/categoria/gatos'><li>Productos Fermin Gatos</li></Link>
+            <nav className="navigation">
+                <ul className="navigation__menu">
+                    <Link to='/category/dogs'><li>Productos Fermin Dogs</li></Link>
+                    <Link to='/category/cats'><li>Productos Fermin Cats</li></Link>
                 </ul>
             </nav>
             <Link to='/cart'>
-                <div className="cart__cantidad">{ cantidadCarrito() !== 0 && cantidadCarrito()}</div>
+                <div className="shoppingCart__iconquantity">{ cartQuantity() !== 0 && cartQuantity()}</div>
                 <CartWidget/>
             </Link>
         </header>

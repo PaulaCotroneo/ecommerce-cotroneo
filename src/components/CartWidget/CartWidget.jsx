@@ -1,10 +1,10 @@
 import React from 'react'
-import carrito from './icon-carrito.png'
+import imgcart from './icon-cart.png'
 
 export const CartWidget = () => {
     return (
         <div>           
-            <img src={carrito} alt="icon-carrito"/>
+            <img src={imgcart} alt="icon-cart"/>
         </div>
     )
 }

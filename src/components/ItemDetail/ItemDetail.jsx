@@ -6,44 +6,44 @@ import ItemCount from '../ItemCount/ItemCount'
 
 export const ItemDetail = ( { product } ) => {  
 
-    const { cartList, agregarAlCarrito } = useCartContext();
+    const { addToCart } = useCartContext();
 
-    const [contador, setContador] = useState (0);
+    const [ count, setCount ] = useState(0);
 
-    function onAdd(cant){
-        agregarAlCarrito({item: product, cantidad: cant})
-        setContador(cant)
+    function onAdd ( quantity ) {
+        addToCart ( {item: product, quantity: quantity} )
+        setCount ( quantity )
     }  
     
-    console.log(cartList)
+    return (
 
-  return (
-    <>
-    <div className="detalles contenedor">    
-        <div key={product.id} className="detalle">
-            <img className="detalle__imagen" src={product.imagen} alt={product.descripImagen}/>
-            <div className="detalle__informacion"> 
-                <h4>{product.nombre}</h4>  
-                <p>Fermín {product.categoria}</p> 
-                <p>{product.descripcion}</p>                                                            
-                <p className="detalle__precio">${product.precio}</p>  
-            {
-                contador === 0 ? 
-                    <ItemCount initial={1} stock={product.stock} onAdd={onAdd}/>
-                :
-				    <>
-					    <Link to='/cart'>
-                            <button className="producto__btn">Terminar compra</button>
-                        </Link>
-					    <Link to='/'>
-                            <button className="producto__btn">Continuar comprando</button>
-                        </Link>
-				    </>
-		    } 
-            </div>
-        </div> 
-    </div>
-    </>
+        <>
+        <div className="details container">    
+            <div key={product.id} className="detail center">
+                <img className="detail__image" src={product.image} alt={product.altImage}/>
+                <div className="detail__information"> 
+                    <h4>{product.name}</h4>  
+                    <p>Fermín {product.category}</p> 
+                    <p>{product.description}</p>                                                            
+                    <p className="detail__price">${product.price}</p>  
+                {
+                    count === 0 ? 
+                        <ItemCount initial={1} stock={product.stock} onAdd={onAdd}/>
+                    :
+                        <>
+                            <p className="detail__message">Producto agregado al Carrito!</p>
+                            <Link to='/cart'>
+                                <button className="product__button">Terminar compra</button>
+                            </Link>
+                            <Link to='/'>
+                                <button className="product__button">Continuar comprando</button>
+                            </Link>
+                        </>
+                } 
+                </div>
+            </div> 
+        </div>
+        </>
   
     )
 };

@@ -2,23 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-export const Item = ( {id, nombre, imagen, descripImagen, categoria, precio, oferta} ) => {
+export const Item = ( {products} ) => {
 
-    
-  return (
-        <div key={id} className="producto">
-            <img className="producto__imagen" src={imagen} alt={descripImagen}/> 
-            <div className="producto__informacion"> 
-                <h4>{nombre}</h4>  
-                <p>Fermín {categoria}</p>                                                            
-                <div className="producto__precio">  
-                    <p className="precio">${precio}</p>  
-                    <p className="oferta">${oferta}</p> 
-                </div>  
-                <Link to={ `/detalle/${id}` }>
-                    <button className="producto__btn">Detalle del Producto</button>
-                </Link>
-            </div>
-        </div>  
+    return (
+
+            <div key={products.id} className="product">
+                <img className="product__image" src={products.image} alt={products.altImage}/> 
+                <div className="product__information"> 
+                    <h4>{products.name}</h4>  
+                    <p>Fermín {products.category}</p>                                                            
+                    <div className="product__price">  
+                        <p className="price">${products.price}</p>  
+                        <p className="discount">${products.noOffer}</p> 
+                    </div>  
+                    <Link to={ `/detail/${products.id}` }>
+                        <button className="product__button">Detalle del Producto</button>
+                    </Link>
+                </div>
+            </div>  
+
     )
 };
